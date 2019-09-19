@@ -12,8 +12,7 @@ import javax.sql.DataSource;
  * @author zhenye 2019/9/19
  */
 @Configuration
-public class PrimaryDataSourceConfig {
-
+public class MultiDataSourceConfig {
     /**
      * 数据源对象
      */
@@ -21,6 +20,24 @@ public class PrimaryDataSourceConfig {
     @ConfigurationProperties("primary.datasource")
     @Primary
     public DataSource primaryDataSource() {
+        return DataSourceBuilder.create().build();
+    }
+
+    /**
+     * 数据源对象
+     */
+    @Bean(name = "secondDataSource")
+    @ConfigurationProperties("second.datasource")
+    public DataSource secondDataSource() {
+        return DataSourceBuilder.create().build();
+    }
+
+    /**
+     * 数据源对象
+     */
+    @Bean(name = "thirdDataSource")
+    @ConfigurationProperties("third.datasource")
+    public DataSource thirdDataSource() {
         return DataSourceBuilder.create().build();
     }
 }

@@ -10,15 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.sql.DataSource;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SprintbootJpaApplicationTests {
-
-	@Autowired
-	private DataSource dataSource;
 
 	@Autowired
 	private StudentRepository studentRepository;
@@ -30,9 +26,13 @@ public class SprintbootJpaApplicationTests {
 		List<Student> pStudentList = studentRepository.findAll();
 		System.out.println(pStudentList);
 
-        DataSourceContextHolder.setDataSourceType(DataSourceTypeEnum.secondary);
-        List<Student> sStudentList = studentRepository.findAll();
-        System.out.println(sStudentList);
+        DataSourceContextHolder.setDataSourceType(DataSourceTypeEnum.second);
+		List<Student> sStudentList = studentRepository.findAll();
+		System.out.println(sStudentList);
+
+		DataSourceContextHolder.setDataSourceType(DataSourceTypeEnum.third);
+		List<Student> tStudentList = studentRepository.findAll();
+		System.out.println(tStudentList);
 	}
 
 }

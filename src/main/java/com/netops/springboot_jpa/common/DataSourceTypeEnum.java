@@ -8,5 +8,5 @@ public enum DataSourceTypeEnum {
     /**
      * 数据源类型
      */
-    primary,secondary
+    primary, second, third
 }
