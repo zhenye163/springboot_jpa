@@ -1,16 +1,17 @@
-package com.netops.sprintboot_jpa.entity;
+package com.netops.springboot_jpa.entity;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 @Data
 public class Student {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;//主键自增
     private String name;//姓名
     private Integer age;//年龄

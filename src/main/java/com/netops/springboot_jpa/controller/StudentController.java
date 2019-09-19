@@ -1,7 +1,7 @@
-package com.netops.sprintboot_jpa.controller;
+package com.netops.springboot_jpa.controller;
 
-import com.netops.sprintboot_jpa.entity.Student;
-import com.netops.sprintboot_jpa.service.StudentService;
+import com.netops.springboot_jpa.entity.Student;
+import com.netops.springboot_jpa.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

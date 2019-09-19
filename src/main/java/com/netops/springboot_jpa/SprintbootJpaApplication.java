@@ -1,4 +1,4 @@
-package com.netops.sprintboot_jpa;
+package com.netops.springboot_jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

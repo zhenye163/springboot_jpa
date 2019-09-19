@@ -1,7 +1,7 @@
-package com.netops.sprintboot_jpa.service;
+package com.netops.springboot_jpa.service;
 
-import com.netops.sprintboot_jpa.domain.TeacherRepository;
-import com.netops.sprintboot_jpa.entity.Teacher;
+import com.netops.springboot_jpa.repository.TeacherRepository;
+import com.netops.springboot_jpa.entity.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

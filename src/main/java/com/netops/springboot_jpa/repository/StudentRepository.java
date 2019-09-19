@@ -1,6 +1,6 @@
-package com.netops.sprintboot_jpa.domain;
+package com.netops.springboot_jpa.repository;
 
-import com.netops.sprintboot_jpa.entity.Student;
+import com.netops.springboot_jpa.entity.Student;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
